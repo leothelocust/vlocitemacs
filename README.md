@@ -12,10 +12,9 @@ Emacs transient wrapper for the Vlocity Build Tool
            :files ("*.el")))
            
 ;; in config.el
-(map! :map global-map
-      "C-x C-l v"     #'vlo/transient-action
-      ;;...
-      )
+(use-package! vlocitemacs
+    :commands vlo/transient-action
+    :bind ("C-x C-l v" . #'vlo/transient-action))
 ```
 ### via use-package & straight
 ```elisp
